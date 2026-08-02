@@ -172,3 +172,25 @@ main {
 .contact-item__link:focus-visible {
   text-decoration: underline;
 }
+
+@media (width <= 480px) {
+  .site-header {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .site-footer {
+    padding: var(--space-md);
+  }
+
+  main {
+    padding: var(--space-md);
+  }
+
+  .about__name {
+    font-size: 1.5rem;
+  }
+
+  .works-list {
+    grid-template-columns: 1fr;
+  }
+}
