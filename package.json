@@ -1,0 +1,19 @@
+{
+  "name": "waserin-personal-site",
+  "version": "0.0.1",
+  "private": true,
+  "description": "waserin個人サイト（自己紹介＋作品ギャラリー）",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "eslint .",
+    "lint:css": "stylelint \"styles/**/*.css\"",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
+    "vitest": "^2.1.1"
+  }
+}

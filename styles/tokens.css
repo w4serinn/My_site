@@ -1,0 +1,21 @@
+/*
+  配色・デザインテイストは未確定（CLAUDE.md参照）。
+  evolveループがここにトークンを追加・調整してよい。
+  暫定で最低限の変数だけ置いておく。
+*/
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --accent: #4a4a4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, sans-serif;
+}
