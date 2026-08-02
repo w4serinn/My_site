@@ -11,7 +11,7 @@ evolveループの各サイクルの実施記録。フォーマット：
 - blocked / content-pending: なし or (内容)
 ```
 
-## 2026-08-02 21:00
+## 2026-08-02 20:56
 - 実装: タスク0「共通パーツ」完了。partials/header.html・footer.htmlの暫定コメントを外し、
   styles/tokens.cssにヘッダー（ロゴ＋ナビ）・フッターのレイアウト/ボーダー/ホバースタイルを追加。
   ついでにpackage.json未インストール（初回git init直後）だったのでnpm installを実施。
@@ -21,7 +21,7 @@ evolveループの各サイクルの実施記録。フォーマット：
 - 次回予定: タスク1「トップページ：自己紹介」の構成決め（content-pending見込み）
 - blocked / content-pending: なし
 
-## 2026-08-02 22:07
+## 2026-08-02 21:13
 - 実装: タスク1「トップページ：自己紹介」の構成を決定。名前(h1.about__name)・
   肩書き/一言(p.about__tagline)・興味の方向性(p.about__interests)の3項目構成とし、
   SNSリンク欄はタスク3のcontactセクションと重複するため含めない方針とした。
