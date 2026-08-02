@@ -62,3 +62,28 @@ body {
   font-size: 0.875rem;
   text-align: center;
 }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.about {
+  margin-bottom: var(--space-lg);
+}
+
+.about__name {
+  margin: 0 0 var(--space-sm);
+  font-size: 2rem;
+}
+
+.about__tagline {
+  margin: 0 0 var(--space-sm);
+  color: var(--accent);
+  font-size: 1.125rem;
+}
+
+.about__interests {
+  margin: 0;
+}
