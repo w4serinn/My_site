@@ -139,3 +139,36 @@ main {
 .work-card__link:focus-visible {
   text-decoration: underline;
 }
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.contact-item__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  background: var(--border);
+  border-radius: 50%;
+}
+
+.contact-item__link {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.contact-item__link:hover,
+.contact-item__link:focus-visible {
+  text-decoration: underline;
+}

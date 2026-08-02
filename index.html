@@ -40,10 +40,16 @@
       </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact">
       <h2>Contact</h2>
-      <!-- docs/ROADMAP.md 「3. 連絡先・SNSリンク」タスクでevolveループが枠を作る（content-pending） -->
-      <p>[要入力：SNS/連絡先リンク]</p>
+      <!-- アイコン＋リンクのリスト形式の枠。具体的なSNS/連絡先は本文入力待ち（content-pending）。
+           入力されるリンク数に応じて <li class="contact-item"> を複製してよい -->
+      <ul class="contact-list">
+        <li class="contact-item">
+          <span class="contact-item__icon" aria-hidden="true"></span>
+          <a class="contact-item__link" href="[要入力：SNS/連絡先リンク]">[要入力：SNS/連絡先リンク]</a>
+        </li>
+      </ul>
     </section>
   </main>
 
