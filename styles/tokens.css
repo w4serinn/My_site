@@ -4,9 +4,13 @@
   暫定で最低限の変数だけ置いておく。
 */
 :root {
-  --bg: #ffffff;
+  --bg: #fff;
   --fg: #1a1a1a;
   --accent: #4a4a4a;
+  --border: #e0e0e0;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
 }
 
 * {
@@ -18,4 +22,43 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: system-ui, sans-serif;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__logo {
+  color: var(--fg);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header__nav {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.site-header__nav a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-header__nav a:hover,
+.site-header__nav a:focus-visible {
+  text-decoration: underline;
+}
+
+.site-footer {
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 0.875rem;
+  text-align: center;
 }
