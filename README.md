@@ -21,8 +21,10 @@ npm run build      # dist/ に静的サイトを出力
 ## 構成
 
 - `index.html` : トップページ（自己紹介・作品一覧・連絡先）
+- `now.html` : Nowページ（近況）
 - `partials/` : ヘッダー・フッター（`npm run build` で各ページに合体される）
-- `styles/` : CSS（`tokens.css` に配色トークンをまとめる）
+- `styles/` : CSS（`tokens.css` に配色トークンをまとめる。ダーク基調＋ネオン寄り
+  アクセントで統一）
 - `src/` : JS（ロジックは `logic.js`、エントリは `main.js`）
 - `scripts/build.js` : ビルドスクリプト（`{{BASE}}` 置換・partials合体）
 - `docs/ROADMAP.md` : タスク管理（優先順位・完成の定義はここに記載）

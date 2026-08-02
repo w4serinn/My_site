@@ -1,13 +1,14 @@
 /*
-  配色・デザインテイストは未確定（CLAUDE.md参照）。
-  evolveループがここにトークンを追加・調整してよい。
-  暫定で最低限の変数だけ置いておく。
+  配色：ダーク基調＋ネオン寄りのアクセントカラー（2026-08-03確定、docs/ROADMAP.md参照）。
+  --accentはリンク・ボタン等のインタラクティブ要素専用、本文の補助テキストは--muted。
 */
 :root {
-  --bg: #fff;
-  --fg: #1a1a1a;
-  --accent: #4a4a4a;
-  --border: #e0e0e0;
+  --bg: #14141f;
+  --surface: #1c1c2b;
+  --fg: #f2f2f7;
+  --muted: #a1a1b3;
+  --accent: #a78bfa;
+  --border: #2c2c3d;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
@@ -58,7 +59,7 @@ body {
 .site-footer {
   padding: var(--space-md) var(--space-lg);
   border-top: 1px solid var(--border);
-  color: var(--accent);
+  color: var(--muted);
   font-size: 0.875rem;
   text-align: center;
 }
@@ -80,12 +81,22 @@ main {
 
 .about__tagline {
   margin: 0 0 var(--space-sm);
-  color: var(--accent);
+  color: var(--muted);
   font-size: 1.125rem;
 }
 
 .about__interests {
   margin: 0;
+}
+
+.now h1 {
+  margin: 0 0 var(--space-sm);
+  font-size: 2rem;
+}
+
+.now__text {
+  margin: 0;
+  color: var(--muted);
 }
 
 .works {
@@ -106,8 +117,15 @@ main {
   flex-direction: column;
   gap: var(--space-sm);
   padding: var(--space-md);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
+  transition: border-color 0.15s ease;
+}
+
+.work-card:hover,
+.work-card:focus-within {
+  border-color: var(--accent);
 }
 
 .work-card__thumb {
@@ -124,13 +142,13 @@ main {
 .work-card__desc {
   margin: 0;
   flex-grow: 1;
-  color: var(--accent);
+  color: var(--muted);
   font-size: 0.9375rem;
 }
 
 .work-card__link {
   align-self: flex-start;
-  color: var(--fg);
+  color: var(--accent);
   font-weight: 700;
   text-decoration: none;
 }
@@ -159,12 +177,13 @@ main {
   width: 1.5rem;
   height: 1.5rem;
   flex-shrink: 0;
-  background: var(--border);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 50%;
 }
 
 .contact-item__link {
-  color: var(--fg);
+  color: var(--accent);
   text-decoration: none;
 }
 
