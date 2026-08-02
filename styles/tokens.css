@@ -87,3 +87,55 @@ main {
 .about__interests {
   margin: 0;
 }
+
+.works {
+  margin-bottom: var(--space-lg);
+}
+
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.work-card__thumb {
+  aspect-ratio: 16 / 9;
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.work-card__title {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.work-card__desc {
+  margin: 0;
+  flex-grow: 1;
+  color: var(--accent);
+  font-size: 0.9375rem;
+}
+
+.work-card__link {
+  align-self: flex-start;
+  color: var(--fg);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.work-card__link:hover,
+.work-card__link:focus-visible {
+  text-decoration: underline;
+}

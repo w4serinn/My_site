@@ -20,18 +20,22 @@
       <p class="about__interests">[要入力：興味の方向性]</p>
     </section>
 
-    <section id="works">
+    <section id="works" class="works">
       <h2>Works</h2>
-      <!-- カードのフォーマットは docs/ROADMAP.md 「2. トップページ：作品一覧カード」タスクで
-           evolveループが決める（content-pending） -->
+      <!-- カードのフォーマット：サムネ枠・タイトル・一言説明・リンクボタンの4要素構成。
+           一言説明・マイン数独の公開URLは本文入力待ち（content-pending） -->
       <ul class="works-list">
-        <li>
-          <a href="https://arnold-academy.com">アルノルド</a>
-          <p>[要入力：アルノルドの紹介文]</p>
+        <li class="work-card">
+          <div class="work-card__thumb" aria-hidden="true"></div>
+          <h3 class="work-card__title">王立魔法学院アルノルド</h3>
+          <p class="work-card__desc">[要入力：アルノルドの紹介文]</p>
+          <a class="work-card__link" href="https://arnold-academy.com">サイトを見る</a>
         </li>
-        <li>
-          <a href="[要入力：マイン数独の公開URL]">マイン数独</a>
-          <p>[要入力：マイン数独の紹介文]</p>
+        <li class="work-card">
+          <div class="work-card__thumb" aria-hidden="true"></div>
+          <h3 class="work-card__title">マイン数独</h3>
+          <p class="work-card__desc">[要入力：マイン数独の紹介文]</p>
+          <a class="work-card__link" href="[要入力：マイン数独の公開URL]">サイトを見る</a>
         </li>
       </ul>
     </section>
