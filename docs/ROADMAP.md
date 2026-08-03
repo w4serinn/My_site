@@ -58,9 +58,10 @@ status: content-pending / サイズ: S
 - [x] favicon の設置（`assets/favicon.svg`、暫定プレースホルダー）
 - [x] OGP設定（`assets/og-image.svg`を暫定プレースホルダーとして設置。
       タイトルは「waserin」で確定、説明文は `[要入力：サイトの説明文]`）
+- [x] `og:image`のURLを絶対パス化（`https://w4serinn.github.io/My_site/assets/og-image.svg`。
+      GitHub Pagesのデフォルト配信先を前提とした値。カスタムドメインを設定する
+      場合は要更新）
 - [ ] 説明文（description/og:description）の本文入力待ち
-- [ ] 【新規】デプロイ先ドメイン確定後、`og:image`のURLを絶対パスに
-      差し替える（現状は相対パスのため一部SNSでプレビューされない可能性）
 
 ### 5. Nowページ（今何してるかの近況ページ）
 status: content-pending / サイズ: S
