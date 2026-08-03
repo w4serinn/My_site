@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colophon | waserin</title>
+  <meta name="description" content="[要入力：サイトの説明文]" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Colophon | waserin" />
+  <meta property="og:description" content="[要入力：サイトの説明文]" />
+  <meta property="og:image" content="https://w4serinn.github.io/My_site/assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="{{BASE}}assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="{{BASE}}styles/tokens.css" />
+</head>
+<body>
+  <!-- HEADER -->
+
+  <main>
+    <section class="colophon">
+      <h1>Colophon</h1>
+      <p>
+        このサイトは、Claude Codeの<code>/evolve</code>自動開発サイクルによって
+        構築されています。素のHTML／CSS／JavaScriptによる静的サイトで、
+        ビルドスクリプト（<code>scripts/build.js</code>）がヘッダー・フッターの
+        合体とパス解決を行い、GitHub Pagesでホスティングされています。
+      </p>
+      <p>
+        ソースコードは
+        <a href="https://github.com/w4serinn/My_site" class="colophon__link">GitHub</a>
+        で公開されています。
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <script src="{{BASE}}src/main.js" type="module"></script>
+</body>
+</html>

@@ -188,3 +188,33 @@ evolveループの各サイクルの実施記録。フォーマット：
 - lint: ✓ / lint:css: ✓ / test: ✓ / build: ✓
 - 次回予定: タスク1〜5の本文入力待ち。入力され次第、該当タスクを`完了`に変更する
 - blocked / content-pending: タスク1〜5は変更なし（引き続き本文入力待ち）
+
+## 2026-08-03 15:19（手動指示によるサイクル外実装）
+- 実装: ユーザーの直接指示により、新規ページ提案候補4件を確定タスクへ格上げして
+  実装（タスク6〜9）。加えてループが新規考案した「Colophonページ」を実装
+  （タスク10）。
+  (1) `uses.html`（Usesページ、リスト形式`.list-page`、本文content-pending）
+  (2) `favorites.html`（Favoritesページ、同上）
+  (3) `timeline.html`（Timelineページ、年＋出来事のリスト`.timeline`、本文
+      content-pending）
+  (4) `secret.html`（隠しページ。主要ナビには載せず、フッターのコピーライト
+      表記末尾に低コントラストのトリガーリンクを設置。本文content-pending）
+  (5) `colophon.html`（サイトについて。実際の構築事実＝Claude Codeの`/evolve`
+      サイクルで構築・素のHTML/CSS/JS・GitHub Pagesホスティング・ソースリンク
+      を記載。本文は事実ベースのため`完了`）
+  `partials/header.html`のナビにUses/Favorites/Timelineを追加、
+  `partials/footer.html`にColophonリンクと隠しページトリガーを追加。
+  `styles/tokens.css`に各ページのスタイルを追加。
+  ROADMAP.mdのコンセプト節を更新し、「確定タスクが尽きたらevolveループが
+  承認不要で新規ページ・コンテンツを自律的に考案してよい」という
+  2026-08-03のユーザー指示を明記（従来の「新規ページは完成後」ゲートは撤廃）。
+  README.mdの構成一覧・運用ルールも更新。
+- レビュー: 指摘1件対応（`.site-footer a` / `.colophon a`の記述がstylelintの
+  no-descending-specificityに抵触したため、既存の`__link`命名規則に合わせて
+  `.site-footer__link` / `.colophon__link`の明示クラスに変更）。
+  `[要入力：...]` プレースホルダーは4ページとも維持、本文の無断創作なし。
+- lint: ✓ / lint:css: ✓ / test: ✓ / build: ✓（7ページ出力を確認）
+- 次回予定: タスク1〜9の本文入力待ち。入力され次第、該当タスクを`完了`に変更する
+- blocked / content-pending: タスク1〜9（10は完了）は本文（肩書き・興味の方向性、
+  作品説明×2、マイン数独URL、SNS/連絡先リンク、サイト説明文、各ページの近況/
+  ツール/好きなもの/年表/隠しページ内容）が入力待ち

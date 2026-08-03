@@ -22,6 +22,11 @@ npm run build      # dist/ に静的サイトを出力
 
 - `index.html` : トップページ（自己紹介・作品一覧・連絡先）
 - `now.html` : Nowページ（近況）
+- `uses.html` : Usesページ（使っているツール・環境）
+- `favorites.html` : Favoritesページ（好きなものリスト）
+- `timeline.html` : Timelineページ（年表）
+- `colophon.html` : Colophonページ（サイトの構築情報）
+- `secret.html` : 隠しページ（フッターの控えめなリンクから遷移）
 - `partials/` : ヘッダー・フッター（`npm run build` で各ページに合体される）
 - `styles/` : CSS（`tokens.css` に配色トークンをまとめる。ダーク基調＋ネオン寄り
   アクセントで統一）
@@ -38,5 +43,8 @@ npm run build      # dist/ に静的サイトを出力
 - チャットでの相談中はコードを実装しない。実装は `/evolve` サイクル内でのみ行う
 - 自己紹介・作品説明などの本文はループが勝手に創作しない
   （`[要入力：...]` のプレースホルダーを置き、ユーザーが後から入力する＝`content-pending`）
+- 確定タスクが尽きた場合、evolveループは承認不要で新規ページ・コンテンツの枠を
+  自律的に考案・実装してよい（2026-08-03のユーザー指示、`docs/ROADMAP.md`参照）。
+  ただし本文の無断創作はしない方針は変わらない
 - mainへの直接push・PRの作成/マージは禁止。取り込みは人間が判断する
 - マージ後、GitHub Actionsが自動でGitHub Pagesへデプロイする（`.github/workflows/pages.yml`）
