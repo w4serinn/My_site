@@ -98,4 +98,22 @@ describe("build", () => {
       expect(content).toContain('property="og:url"');
     }
   });
+
+  it("全ページにスキップリンクとmain#main-contentが存在する", async () => {
+    const pages = [
+      "index.html",
+      "now.html",
+      "uses.html",
+      "favorites.html",
+      "timeline.html",
+      "colophon.html",
+      "secret.html",
+      "404.html",
+    ];
+    for (const page of pages) {
+      const content = await fs.readFile(path.join(root, "dist", page), "utf-8");
+      expect(content).toContain('href="#main-content" class="skip-link"');
+      expect(content).toContain('<main id="main-content">');
+    }
+  });
 });

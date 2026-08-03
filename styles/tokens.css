@@ -25,6 +25,21 @@ body {
   font-family: system-ui, sans-serif;
 }
 
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  z-index: 100;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface);
+  color: var(--fg);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .site-header {
   display: flex;
   flex-wrap: wrap;
