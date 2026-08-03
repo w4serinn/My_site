@@ -81,4 +81,21 @@ describe("build", () => {
     expect(content).toContain('<base href="https://w4serinn.github.io/My_site/" />');
     expect(content.includes("{{BASE}}")).toBe(false);
   });
+
+  it("実ページ全てにcanonical/og:urlが設定されている", async () => {
+    const pages = [
+      "index.html",
+      "now.html",
+      "uses.html",
+      "favorites.html",
+      "timeline.html",
+      "colophon.html",
+    ];
+    for (const page of pages) {
+      const content = await fs.readFile(path.join(root, "dist", page), "utf-8");
+      expect(content).toContain(`https://w4serinn.github.io/My_site/${page}`);
+      expect(content).toContain('rel="canonical"');
+      expect(content).toContain('property="og:url"');
+    }
+  });
 });

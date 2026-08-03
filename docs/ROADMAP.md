@@ -158,6 +158,19 @@ status: 完了 / サイズ: S
 - [x] `tests/build.test.js`に回帰テストを追加（ナビリンク・フッターリンク・
       og:image絶対URL・robots.txt/sitemap.xml/404.htmlの生成確認）
 
+### 12. SEO基盤の仕上げ（canonical / og:url）
+status: 完了 / サイズ: S
+
+<!-- 2026-08-03、確定タスク1〜9がすべてcontent-pendingの状況でループが自律的に
+     考案（タスク11に続く技術的完成度向上の一環）。既知のGitHub Pages URLに
+     基づく機械的な追加のため本文の無断創作にあたらず即completeとした -->
+
+- [x] index/now/uses/favorites/timeline/colophonの各ページに
+      `<link rel="canonical">`と`og:url`を追加（secret.html/404.htmlは
+      noindex方針のため対象外）
+- [x] `tests/build.test.js`に全ページのcanonical/og:url存在を検証する
+      回帰テストを追加
+
 ## 今後のタスク候補
 
 （確定タスク・提案候補がすべて尽きた場合、evolveループが自律的に新規ページ・
