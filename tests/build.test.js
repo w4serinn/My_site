@@ -116,4 +116,21 @@ describe("build", () => {
       expect(content).toContain('<main id="main-content">');
     }
   });
+
+  it("全ページにtheme-colorが設定されている", async () => {
+    const pages = [
+      "index.html",
+      "now.html",
+      "uses.html",
+      "favorites.html",
+      "timeline.html",
+      "colophon.html",
+      "secret.html",
+      "404.html",
+    ];
+    for (const page of pages) {
+      const content = await fs.readFile(path.join(root, "dist", page), "utf-8");
+      expect(content).toContain('name="theme-color" content="#14141f"');
+    }
+  });
 });
