@@ -34,4 +34,51 @@ describe("build", () => {
     expect(content.includes("<!-- FOOTER -->")).toBe(false);
     expect(content.includes("site-header")).toBe(true);
   });
+
+  it("ヘッダーナビにNow/Uses/Favorites/Timelineリンクが含まれる", async () => {
+    const outPath = path.join(root, "dist", "index.html");
+    const content = await fs.readFile(outPath, "utf-8");
+    expect(content).toContain("now.html");
+    expect(content).toContain("uses.html");
+    expect(content).toContain("favorites.html");
+    expect(content).toContain("timeline.html");
+  });
+
+  it("フッターにColophonリンクと隠しページトリガーが含まれる", async () => {
+    const outPath = path.join(root, "dist", "index.html");
+    const content = await fs.readFile(outPath, "utf-8");
+    expect(content).toContain("colophon.html");
+    expect(content).toContain("secret.html");
+  });
+
+  it("index.htmlのog:imageが絶対URLのまま保たれている", async () => {
+    const outPath = path.join(root, "dist", "index.html");
+    const content = await fs.readFile(outPath, "utf-8");
+    expect(content).toContain('property="og:image" content="https://w4serinn.github.io/My_site/assets/og-image.svg"');
+  });
+
+  it("dist/robots.txt を生成する", async () => {
+    const outPath = path.join(root, "dist", "robots.txt");
+    const exists = await fs
+      .access(outPath)
+      .then(() => true)
+      .catch(() => false);
+    expect(exists).toBe(true);
+  });
+
+  it("dist/sitemap.xml を生成する", async () => {
+    const outPath = path.join(root, "dist", "sitemap.xml");
+    const exists = await fs
+      .access(outPath)
+      .then(() => true)
+      .catch(() => false);
+    expect(exists).toBe(true);
+  });
+
+  it("dist/404.html を生成し、<base>で絶対URLを固定している", async () => {
+    const outPath = path.join(root, "dist", "404.html");
+    const content = await fs.readFile(outPath, "utf-8");
+    expect(content).toContain('<base href="https://w4serinn.github.io/My_site/" />');
+    expect(content.includes("{{BASE}}")).toBe(false);
+  });
 });

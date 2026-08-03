@@ -218,3 +218,24 @@ evolveループの各サイクルの実施記録。フォーマット：
 - blocked / content-pending: タスク1〜9（10は完了）は本文（肩書き・興味の方向性、
   作品説明×2、マイン数独URL、SNS/連絡先リンク、サイト説明文、各ページの近況/
   ツール/好きなもの/年表/隠しページ内容）が入力待ち
+
+## 2026-08-03 15:24
+- 実装: 確定タスク1〜9がすべてcontent-pendingの状況で、2026-08-03のユーザー
+  指示（タスクが尽きたらevolveループが自律的に新規内容を作成してよい）に基づき、
+  タスク11「サイト基盤の仕上げ」を新規考案・実装。
+  (1) `404.html`：GitHub Pagesの404.htmlは元のアクセス先URLのままレンダリング
+      される仕様のため、`<base href="https://w4serinn.github.io/My_site/">`で
+      相対パスの解決基準を固定。本文は「お探しのページが見つかりませんでした」
+      等の定型UI文言のみで本文の無断創作にあたらないため`完了`
+  (2) `robots.txt`：全クローラー許可、sitemap.xmlを案内
+  (3) `sitemap.xml`：index/now/uses/favorites/timeline/colophonを掲載
+      （secret.htmlは隠しページの性質上、意図的に除外）
+  (4) `scripts/build.js`に`COPY_FILES`機構を追加し、robots.txt/sitemap.xmlを
+      distへコピーするようにした
+  (5) `tests/build.test.js`に回帰テスト6件を追加（ナビリンク・フッターリンク・
+      og:image絶対URL・robots.txt/sitemap.xml/404.htmlの生成確認）
+- レビュー: OK（本文はすべて定型UI文言・技術的事実のみで、無断創作なし）
+- lint: ✓ / lint:css: ✓ / test: ✓（10件） / build: ✓（8ページ出力を確認）
+- 次回予定: タスク1〜9の本文入力待ち。入力され次第、該当タスクを`完了`に変更する。
+  それも尽きればさらに新規コンテンツを自律的に検討する
+- blocked / content-pending: タスク1〜9（10・11は完了）は本文が入力待ち

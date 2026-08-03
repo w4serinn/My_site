@@ -27,11 +27,14 @@ npm run build      # dist/ に静的サイトを出力
 - `timeline.html` : Timelineページ（年表）
 - `colophon.html` : Colophonページ（サイトの構築情報）
 - `secret.html` : 隠しページ（フッターの控えめなリンクから遷移）
+- `404.html` : カスタム404ページ（`<base>`でGitHub Pages特有のパス解決を固定）
+- `robots.txt` / `sitemap.xml` : 検索エンジン向けの基本ファイル
 - `partials/` : ヘッダー・フッター（`npm run build` で各ページに合体される）
 - `styles/` : CSS（`tokens.css` に配色トークンをまとめる。ダーク基調＋ネオン寄り
   アクセントで統一）
 - `src/` : JS（ロジックは `logic.js`、エントリは `main.js`）
-- `scripts/build.js` : ビルドスクリプト（`{{BASE}}` 置換・partials合体）
+- `scripts/build.js` : ビルドスクリプト（`{{BASE}}` 置換・partials合体・
+  `robots.txt`/`sitemap.xml`のコピー）
 - `docs/ROADMAP.md` : タスク管理（優先順位・完成の定義はここに記載）
 - `docs/roadmap-done.md` : 完了タスクの退避先
 - `docs/cycle-log.md` : evolveサイクルの実施記録

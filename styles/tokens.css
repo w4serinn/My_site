@@ -295,6 +295,32 @@ main {
   color: var(--muted);
 }
 
+.not-found {
+  text-align: center;
+}
+
+.not-found h1 {
+  margin: 0 0 var(--space-sm);
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.not-found__text {
+  margin: 0 0 var(--space-md);
+  color: var(--muted);
+}
+
+.not-found__link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.not-found__link:hover,
+.not-found__link:focus-visible {
+  text-decoration: underline;
+}
+
 @media (width <= 480px) {
   .site-header {
     padding: var(--space-sm) var(--space-md);

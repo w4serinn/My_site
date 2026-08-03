@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 | waserin</title>
+  <meta name="robots" content="noindex" />
+  <!-- GitHub Pagesの404.htmlは元のアクセス先URLのままレンダリングされるため、
+       相対パスの解決基準を<base>で明示的に固定する。
+       カスタムドメインを設定した場合は要更新 -->
+  <base href="https://w4serinn.github.io/My_site/" />
+  <link rel="icon" href="{{BASE}}assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="{{BASE}}styles/tokens.css" />
+</head>
+<body>
+  <!-- HEADER -->
+
+  <main>
+    <section class="not-found">
+      <h1>404</h1>
+      <p class="not-found__text">お探しのページが見つかりませんでした。</p>
+      <a class="not-found__link" href="{{BASE}}index.html">トップページに戻る</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <script src="{{BASE}}src/main.js" type="module"></script>
+</body>
+</html>

@@ -140,6 +140,24 @@ status: 完了 / サイズ: S
       素のHTML/CSS/JS、GitHub Pagesでホスティング、ソースへのリンク）を記載
 - [x] `partials/footer.html`にColophonへのリンクを設置
 
+### 11. サイト基盤の仕上げ（404ページ・robots.txt・sitemap.xml）
+status: 完了 / サイズ: S
+
+<!-- 2026-08-03、確定タスク1〜9がすべてcontent-pendingの状況でループが自律的に
+     考案（2026-08-03のユーザー指示「タスクが尽きたら勝手に新規内容を作成してよい」
+     に基づく）。いずれも定型的なUI文言・技術的事実のみで本文の無断創作に
+     あたらないため即completeとした -->
+
+- [x] `404.html`を新規作成。GitHub Pagesの404.htmlは元のアクセス先URLのまま
+      レンダリングされる仕様のため、`<base href="https://w4serinn.github.io/My_site/">`
+      で相対パスの解決基準を固定
+- [x] `robots.txt`を新規作成（全クローラー許可、sitemap.xmlを案内）
+- [x] `sitemap.xml`を新規作成（`secret.html`は隠しページの性質上、意図的に除外）
+- [x] `scripts/build.js`に`COPY_FILES`を追加し、`robots.txt`/`sitemap.xml`を
+      distへコピーする仕組みを実装
+- [x] `tests/build.test.js`に回帰テストを追加（ナビリンク・フッターリンク・
+      og:image絶対URL・robots.txt/sitemap.xml/404.htmlの生成確認）
+
 ## 今後のタスク候補
 
 （確定タスク・提案候補がすべて尽きた場合、evolveループが自律的に新規ページ・

@@ -28,6 +28,7 @@ const SKIP_DIRS = new Set([
 ]);
 
 const COPY_DIRS = ["styles", "src", "assets"];
+const COPY_FILES = ["robots.txt", "sitemap.xml"];
 
 async function readPartial(name) {
   const p = path.join(root, "partials", name);
@@ -101,6 +102,14 @@ async function build() {
 
   for (const dir of COPY_DIRS) {
     await copyDir(path.join(root, dir), path.join(distDir, dir));
+  }
+
+  for (const file of COPY_FILES) {
+    try {
+      await fs.copyFile(path.join(root, file), path.join(distDir, file));
+    } catch {
+      // 未作成のファイルはスキップ
+    }
   }
 
   console.log(`build完了: ${htmlFiles.length}ページを dist/ に出力しました`);
