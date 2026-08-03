@@ -74,6 +74,8 @@ status: content-pending / サイズ: S
       プレースホルダーを使用
 - [x] `partials/header.html`のナビに「Now」リンクを追加
 - [x] 本文は `[要入力：今何をしているか]` のプレースホルダーを配置
+- [x] `now.html`にindex.htmlと同一方針のOGPメタタグを追加（og:title「Now | waserin」、
+      og:imageは確定済みの絶対URLを流用）
 - [ ] `[要入力：今何をしているか]` の本文入力待ち
       （入力され次第、次サイクルで `完了` に変更する）
 

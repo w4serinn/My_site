@@ -158,3 +158,14 @@ evolveループの各サイクルの実施記録。フォーマット：
 - lint: ✓ / lint:css: ✓ / test: ✓ / build: ✓
 - 次回予定: タスク1〜5の本文入力待ち。入力され次第、該当タスクを`完了`に変更する
 - blocked / content-pending: タスク1〜5は変更なし（引き続き本文入力待ち）
+
+## 2026-08-03 12:17
+- 実装: 本文は未入力のためスキップ。`now.html`に`index.html`と同一方針のOGPメタタグ
+  （og:type/og:title/og:description/og:image/twitter:card）が未設置だった構造的な
+  抜けを発見し追加。og:titleは「Now | waserin」、og:imageは前サイクルで確定済みの
+  絶対URL（`https://w4serinn.github.io/My_site/assets/og-image.svg`）を流用。
+  descriptionは本文と同じ`[要入力：サイトの説明文]`のまま。
+- レビュー: OK（`[要入力：...]` プレースホルダーは維持、本文の無断創作なし）
+- lint: ✓ / lint:css: ✓ / test: ✓ / build: ✓（2ページ出力を確認）
+- 次回予定: タスク1〜5の本文入力待ち。入力され次第、該当タスクを`完了`に変更する
+- blocked / content-pending: タスク1〜5は変更なし（引き続き本文入力待ち）
